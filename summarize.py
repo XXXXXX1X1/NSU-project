@@ -61,10 +61,6 @@ def create_summarizer(model_name: str = "facebook/bart-large-cnn",
     """
     Создаёт и возвращает summarization-pipeline.
 
-    Почему грузим модель вручную:
-      - Используем use_safetensors=True, чтобы НЕ обращаться к .bin,
-        тем самым избегаем ограничений на torch.load (актуальные политики безопасности).
-
     Параметры:
       - model_name: имя модели на Hugging Face
       - device: 0 → CUDA (GPU), -1 → CPU, None → определить автоматически
@@ -99,8 +95,7 @@ def summarize_text(summarizer, text: str) -> str:
     """
     Генерирует краткое резюме текста через pipeline('summarization').
 
-    ВАЖНО: по условию фиксируем длины генерации токенов:
-      max_length=15, min_length=5
+
 
     Возвращает резюме строкой (без пост-обрезки по словам).
     """

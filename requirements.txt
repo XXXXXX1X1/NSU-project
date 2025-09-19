@@ -1,4 +1,4 @@
-torch~=2.8.0
-transformers~=4.56.1
-sentencepiece
-protobuf==4.25.3
+transformers>=4.42,<5.0
+torch>=2.6
+safetensors>=0.4.2
+sentencepiece>=0.1.99

@@ -41,19 +41,20 @@
 └─ headline.txt          # сюда будет записан заголовок
 ```
 📦 Требования и установка
-```
+
 Python: 3.10+ (подойдёт и 3.11)
 ```
 pip install -r requirements.txt
 ```
 
 requirements.txt:
-
+```
 transformers>=4.44.0
 torch>=2.6.0
 sentencepiece>=0.1.99
 safetensors>=0.4.3
 accelerate>=1.0.0
+
 ```
 ▶️ Запуск
 
